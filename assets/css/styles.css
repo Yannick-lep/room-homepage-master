@@ -1,0 +1,31 @@
+body {
+    background-color: gray;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img,input {
+    vertical-align: bottom;
+    width: 100%
+}
+ul{
+    list-style-type: none;
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
+#menu #openmenu:not(:checked)~ul{
+    display: none;
+}
+#menu #openmenu:checked~ul{
+    display: block;
+}
+#menu #openmenu:checked~label>img{
+    content: url("../images/icon-hamburger.svg")
+}
+#menu #openmenu:checked~label>img{
+    content: url("../images/icon-close.svg");
+}
