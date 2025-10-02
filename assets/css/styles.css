@@ -1,31 +1,113 @@
-body {
-    background-color: gray;
+@font-face {
+    font-family: 'League Spartan';
+    src: url(../font/LeagueSpartan-Bold.ttf);
 }
+:root{
+    --white: hsl(0, 100%, 100%);
+    --grey500: hsl(0, 0%, 63%);
+    --grey800: hsl(0, 0%, 27%);
+    --black: hsl(0, 0%, 0%);
+}
+body {
+    /* background-color: gray;*/
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-img,input {
+
+img,
+input {
     vertical-align: bottom;
     width: 100%
 }
-ul{
+
+ul {
     list-style-type: none;
 }
-#menu{
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-#menu #openmenu:not(:checked)~ul{
+
+#menu #openmenu {
     display: none;
 }
-#menu #openmenu:checked~ul{
+
+#menu ul {
+    display: none;
+}
+
+#menu #openmenu:not(:checked)~ul {
+    /* vaut false */
+    display: none;
+}
+
+#menu #openmenu:checked~ul {
+    /* vaut true*/
     display: block;
 }
-#menu #openmenu:checked~label>img{
+
+#menu #openmenu:checked~label>img {
     content: url("../images/icon-hamburger.svg")
 }
-#menu #openmenu:checked~label>img{
+
+#menu #openmenu:checked~label>img {
     content: url("../images/icon-close.svg");
+}
+
+header {
+    background-image: url(../images/desktop-image-hero-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header 
+.logo {
+    width: 4rem;
+    margin-top: 4rem;
+}
+
+
+#angle {
+    position: relative;
+    width: 4rem;
+    border: 1px solid black;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+#arrow h2 {
+    letter-spacing: 2rem;
+    padding: 2rem;
+}
+
+#arrow img {
+    width: 5rem;
+    position: relative;
+    display: flex;
+
 }
